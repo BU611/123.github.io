@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - 大一新生</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.5;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            color: #64748b;
+            font-size: 1rem;
+        }
+        
+        section {
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            color: #1e293b;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            width: 25%;
+        }
+        
+        .project-desc {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .skills-list, .hobbies-list {
+            margin-left: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .skills-list li, .hobbies-list li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skills-list i, .hobbies-list i {
+            margin-right: 8px;
+            color: #97a0b0;
+            width: 16px;
+            text-align: center;
+        }
+        
+        .self-evaluation {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        .self-evaluation p {
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            
+            th, td {
+                padding: 6px 8px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>卜亦烁</h1>
+        <p class="title">大一新生 · 计算机科学与技术专业</p>
+    </header>
+    
+    <section>
+        <h2>基本信息</h2>
+        <table>
+            <tr>
+                <th>姓名</th>
+                <td>卜亦烁</td>
+                <th>专业</th>
+                <td>计算机科学与技术</td>
+            </tr>
+            <tr>
+                <th>学院</th>
+                <td colspan="3">计算机与人工智能学院</td>
+            </tr>
+        </table>
+    </section>
+    
+    <section>
+        <h2>项目经历</h2>
+        <table>
+            <tr>
+                <th>项目</th>
+                <td colspan="3">校园小程序设计</td>
+            </tr>
+            <tr>
+                <th>时间</th>
+                <td>2025年9月</td>
+                <th>角色</th>
+                <td>前端开发成员</td>
+            </tr>
+            <tr>
+                <th colspan="4">描述</th>
+            </tr>
+            <tr>
+                <td colspan="4" class="project-desc">
+                    参与开发校园生活助手小程序，负责部分页面设计与实现。学习并应用微信小程序开发技术，加深了对前端开发流程的理解。
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+    <section>
+        <h2>技能</h2>
+        <ol class="skills-list">
+            <li><i class="fas fa-code"></i>c语言基础编程</li>
+            <li><i class="fas fa-code"></i>HTML/CSS 网页设计</li>
+        </ol>
+    </section>
+    
+    <section>
+        <h2>兴趣爱好</h2>
+        <ol class="hobbies-list">
+            <li><i class="fas fa-code"></i>学习编程</li>
+            <li><i class="fas fa-music"></i>听音乐</li>
+            <li><i class="fas fa-book"></i>阅读</li>
+        </ol>
+    </section>
+    
+    <section>
+        <h2>自我评价</h2>
+        <div class="self-evaluation">
+            <p>作为一名大一新生，我对计算机科学充满热情，有很强的学习能力和求知欲。虽然专业知识还在积累阶段，但我愿意投入时间和精力学习新技术。</p>
+            <p>在高中阶段自学了部分基础知识。进入大学后积极参与课堂学习和课外实践，努力提升编程能力和解决问题的能力。</p>
+            <p>性格开朗，乐于交流，能够与同学建立良好的合作关系。在团队项目中认真完成任务，积极向学长学姐请教学习。</p>
+            <p>深知作为大一新生还有很长的路要走，但相信通过持续学习和实践，能够不断进步，为未来职业发展打下坚实基础。</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2025 卜亦烁 - 个人简历</p>
+    </footer>
+</body>
+</html>
