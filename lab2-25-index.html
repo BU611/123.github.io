@@ -18,11 +18,11 @@
             color: #334155;
             line-height: 1.5;
             padding: 20px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
         
-        header {
+        .header {
             text-align: center;
             margin-bottom: 30px;
             padding: 20px 0;
@@ -50,6 +50,54 @@
             margin-bottom: 10px;
             padding-bottom: 5px;
             border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .profile-photo {
+            flex-shrink: 0;
+            width: 150px;
+            height: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 2;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .photo-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: #64748b;
+        }
+        
+        .photo-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+        
+        .profile-info {
+            flex: 1;
+            order: 1;
         }
         
         table {
@@ -113,7 +161,21 @@
             font-size: 0.8rem;
         }
         
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .profile-photo {
+                align-self: center;
+                order: 1;
+            }
+            
+            .profile-info {
+                order: 2;
+            }
+            
             body {
                 padding: 15px;
             }
@@ -123,50 +185,76 @@
                 font-size: 0.85rem;
             }
         }
+        
+        @media (max-width: 480px) {
+            .profile-photo {
+                width: 120px;
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
+    <div class="header">
         <h1>卜亦烁</h1>
-        <p class="title">大一新生 · 计算机科学与技术专业</p>
-    </header>
+        <p class="title">大一新生 · 计算机科学与技术专业</p >
+    </div>
     
     <section>
         <h2>基本信息</h2>
-        <table>
-            <tr>
-                <th>姓名</th>
-                <td>卜亦烁</td>
-                <th>专业</th>
-                <td>计算机科学与技术</td>
-            </tr>
-            <tr>
-                <th>学院</th>
-                <td colspan="3">计算机与人工智能学院</td>
-            </tr>
-        </table>
+        <div class="profile-section">
+            <div class="profile-info">
+                <table>
+                    <tr>
+                        <th>姓名</th>
+                        <td>卜亦烁</td>
+                        <th>专业</th>
+                        <td>计算机科学与技术</td>
+                    </tr>
+                    <tr>
+                        <th>学院</th>
+                        <td colspan="3">计算机与人工智能学院</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="profile-photo">
+                <img src="4.jpg" alt="卜亦烁的个人照片" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="photo-placeholder" style="display: none;">
+                    <i class="fas fa-user-circle"></i>
+                    <div>4.jpg</div>
+                    <div style="font-size: 0.7rem; margin-top: 5px;"></div>
+                </div>
+            </div>
+        </div>
     </section>
     
     <section>
         <h2>项目经历</h2>
         <table>
             <tr>
-                <th>项目</th>
+                <th>项目名称</th>
                 <td colspan="3">校园小程序设计</td>
             </tr>
             <tr>
-                <th>时间</th>
+                <th>项目时间</th>
                 <td>2025年9月</td>
-                <th>角色</th>
+                <th>项目角色</th>
                 <td>前端开发成员</td>
             </tr>
             <tr>
-                <th colspan="4">描述</th>
+                <th colspan="4">项目描述</th>
             </tr>
             <tr>
                 <td colspan="4" class="project-desc">
                     参与开发校园生活助手小程序，负责部分页面设计与实现。学习并应用微信小程序开发技术，加深了对前端开发流程的理解。
                 </td>
+            </tr>
+            <tr>
+                <th rowspan="2">项目成果</th>
+                <td colspan="3">完成了课程表查询模块</td>
+            </tr>
+            <tr>
+                <td colspan="3">实现了校园活动通知功能</td>
             </tr>
         </table>
     </section>
@@ -174,8 +262,9 @@
     <section>
         <h2>技能</h2>
         <ol class="skills-list">
-            <li><i class="fas fa-code"></i>c语言基础编程</li>
+            <li><i class="fas fa-code"></i>C语言基础编程</li>
             <li><i class="fas fa-code"></i>HTML/CSS 网页设计</li>
+            <li><i class="fas fa-code"></i>微信小程序开发基础</li>
         </ol>
     </section>
     
@@ -185,21 +274,22 @@
             <li><i class="fas fa-code"></i>学习编程</li>
             <li><i class="fas fa-music"></i>听音乐</li>
             <li><i class="fas fa-book"></i>阅读</li>
+            <li><i class="fas fa-basketball-ball"></i>篮球</li>
         </ol>
     </section>
     
     <section>
         <h2>自我评价</h2>
         <div class="self-evaluation">
-            <p>作为一名大一新生，我对计算机科学充满热情，有很强的学习能力和求知欲。虽然专业知识还在积累阶段，但我愿意投入时间和精力学习新技术。</p>
-            <p>在高中阶段自学了部分基础知识。进入大学后积极参与课堂学习和课外实践，努力提升编程能力和解决问题的能力。</p>
-            <p>性格开朗，乐于交流，能够与同学建立良好的合作关系。在团队项目中认真完成任务，积极向学长学姐请教学习。</p>
-            <p>深知作为大一新生还有很长的路要走，但相信通过持续学习和实践，能够不断进步，为未来职业发展打下坚实基础。</p>
+            <p>作为一名大一新生，我对计算机科学充满热情，有很强的学习能力和求知欲。虽然专业知识还在积累阶段，但我愿意投入时间和精力学习新技术。</p >
+            <p>在高中阶段自学了部分基础知识。进入大学后积极参与课堂学习和课外实践，努力提升编程能力和解决问题的能力。</p >
+            <p>性格开朗，乐于交流，能够与同学建立良好的合作关系。在团队项目中认真完成任务，积极向学长学姐请教学习。</p >
+            <p>深知作为大一新生还有很长的路要走，但相信通过持续学习和实践，能够不断进步，为未来职业发展打下坚实基础。</p >
         </div>
     </section>
     
     <footer>
-        <p>© 2025 卜亦烁 - 个人简历</p>
+        <p>© 2025 卜亦烁 - 个人简历</p >
     </footer>
 </body>
 </html>
