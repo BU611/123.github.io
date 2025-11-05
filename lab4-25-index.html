@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字展销平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="lab4_1.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-store"></i>
+                <span>数字展销平台</span>
+            </div>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-home"></i><span>首页</span></a></li>
+            <li><a href="#"><i class="fas fa-th-large"></i><span>产品分类</span></a></li>
+            <li><a href="#"><i class="fas fa-fire"></i><span>热门推荐</span></a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li><a href="#"><i class="fas fa-heart"></i><span>我的收藏</span></a></li>
+        </ul>
+        
+        <div class="sidebar-divider"></div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="fas fa-user"></i><span>个人中心</span></a></li>
+            <li><a href="#"><i class="fas fa-cog"></i><span>设置</span></a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i><span>帮助中心</span></a></li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <p>数字展销平台 &copy; 2025</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <h1>数字产品展销中心</h1>
+            <div class="user-actions">
+                <button><i class="fas fa-search"></i> 搜索产品</button>
+                <button><i class="fas fa-user"></i> 登录/注册</button>
+            </div>
+        </header>
+
+        <section class="hero-section">
+            <h1 class="page-title">精选优质数字产品</h1>
+            <p class="page-subtitle">满足您的各种需求，提供卓越的购物体验</p>
+        </section>
+        
+        <section class="filter-section">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <div class="filter-dropdown">
+                        <button class="filter-btn">
+                            <span>产品分类</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">全部产品</a>
+                            <a href="#">数码产品</a>
+                            <a href="#">图书音像</a>
+                            <a href="#">家居用品</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <div class="filter-dropdown">
+                        <button class="filter-btn">
+                            <span>价格范围</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">全部价格</a>
+                            <a href="#">0-100元</a>
+                            <a href="#">100-500元</a>
+                            <a href="#">500-1000元</a>
+                            <a href="#">1000元以上</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-dropdown">
+                        <button class="filter-btn">
+                            <span>排序方式</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">最新上架</a>
+                            <a href="#">价格从低到高</a>
+                            <a href="#">价格从高到低</a>
+                            <a href="#">销量最高</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="products-grid">
+            <div class="product-card">
+                <div class="product-tag">热销</div>
+                <div class="product-image">
+                    <img src="智能手表.jpeg" alt="智能手表" style="max-width:100%; max-height:100%; object-fit:cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">智能手表</h3>
+                    <p class="product-brand">科技先锋</p>
+                    <p class="product-price">¥599.00</p>
+                    <div class="product-actions">
+                        <button class="btn-cart">加入购物车</button>
+                        <button class="btn-view">查看详情</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-tag">新品</div>
+                <div class="product-image">
+                    <img src="蓝牙耳机.jpeg" alt="无线耳机" style="max-width:100%; max-height:100%; object-fit:cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">无线耳机</h3>
+                    <p class="product-brand">声动科技</p>
+                    <p class="product-price">¥299.00</p>
+                    <div class="product-actions">
+                        <button class="btn-cart">加入购物车</button>
+                        <button class="btn-view">查看详情</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="平板电脑.jpeg" alt="平板电脑" style="max-width:100%; max-height:100%; object-fit:cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">平板电脑</h3>
+                    <p class="product-brand">智享生活</p>
+                    <p class="product-price">¥1899.00</p>
+                    <div class="product-actions">
+                        <button class="btn-cart">加入购物车</button>
+                        <button class="btn-view">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <footer class="footer">
+            <p>数字展销平台 &copy; 2025 版权所有</p>
+            <p class="motto">初心至善 匠心育人</p>
+        </footer>
+    </main>
+</body>
+</html>
