@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字图书展销平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="lab5-1.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-book"></i>
+                <span>数字图书</span>
+            </div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-home"></i><span>首页</span></a></li>
+            <li><a href="#"><i class="fas fa-th-large"></i><span>图书分类</span></a></li>
+            <li><a href="#"><i class="fas fa-fire"></i><span>热门推荐</span></a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li><a href="#"><i class="fas fa-heart"></i><span>我的收藏</span></a></li>
+            <li><a href="#"><i class="fas fa-user"></i><span>个人中心</span></a></li>
+            <li><a href="#"><i class="fas fa-cog"></i><span>设置</span></a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">数字图书展销平台</div>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="搜索图书...">
+                        </div>
+                        <div class="user-auth">
+                            <button class="login-btn" id="loginBtn">登录/注册</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <section class="hero-section">
+                <h1 class="page-title">数字图书展销中心</h1>
+                <p class="page-subtitle">精选优质数字图书，满足您的阅读需求</p>
+            </section>
+            <section class="filter-section">
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <div class="filter-dropdown">
+                            <button class="filter-btn">
+                                <span>图书分类</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">全部图书</a>
+                                <a href="#">文学小说</a>
+                                <a href="#">科技科普</a>
+                                <a href="#">经济管理</a>
+                                <a href="#">人文社科</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <div class="filter-dropdown">
+                            <button class="filter-btn">
+                                <span>价格范围</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">全部价格</a>
+                                <a href="#">0-50元</a>
+                                <a href="#">50-100元</a>
+                                <a href="#">100-200元</a>
+                                <a href="#">200元以上</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <div class="filter-dropdown">
+                            <button class="filter-btn">
+                                <span>排序方式</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">最新上架</a>
+                                <a href="#">价格从低到高</a>
+                                <a href="#">价格从高到低</a>
+                                <a href="#">销量最高</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="products-grid">
+                <div class="product-card">
+                    <div class="product-tag">热销</div>
+                    <div class="product-image">
+                        <img src="文学作品.jpg" alt="文学经典">
+                        <div class="product-overlay">
+                            <div class="product-details">
+                                <h3>图书详情</h3>
+                                <p>经典文学作品集，收录多部传世名作。</p>
+                                <p>页数：320页</p>
+                                <p>出版社：文艺出版社</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">文学经典合集</h3>
+                        <p class="product-brand">文艺出版社</p>
+                        <p class="product-price">¥68.00</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-tag">新品</div>
+                    <div class="product-image">
+                        <img src="科技前沿.jpg" alt="科技前沿">
+                        <div class="product-overlay">
+                            <div class="product-details">
+                                <h3>图书详情</h3>
+                                <p>前沿科技解读，了解最新技术发展趋势。</p>
+                                <p>页数：256页</p>
+                                <p>出版社：科技出版社</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">科技前沿解读</h3>
+                        <p class="product-brand">科技出版社</p>
+                        <p class="product-price">¥88.00</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="企业管理实战.jpg" alt="经济管理">
+                        <div class="product-overlay">
+                            <div class="product-details">
+                                <h3>图书详情</h3>
+                                <p>企业管理实战指南，提升管理能力。</p>
+                                <p>页数：400页</p>
+                                <p>出版社：经济出版社</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">企业管理实战</h3>
+                        <p class="product-brand">经济出版社</p>
+                        <p class="product-price">¥128.00</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="subscription-section">
+                <div class="section-header">
+                    <h2>图书推荐订阅</h2>
+                    <p>订阅我们的推荐，第一时间获取最新图书信息</p>
+                </div>
+                <form id="subscriptionForm" class="subscription-form" action="/subscribe" method="POST" enctype="multipart/form-data">
+                    <fieldset class="form-fieldset">
+                        <legend><i class="fas fa-user"></i> 基本信息</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="username">用户名：</label>
+                                <input type="text" id="username" name="username" required placeholder="请输入用户名">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱地址：</label>
+                                <input type="email" id="email" name="email" required placeholder="请输入邮箱地址">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">密码：</label>
+                                <input type="password" id="password" name="password" required placeholder="请输入密码">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate">出生日期：</label>
+                                <input type="date" id="birthdate" name="birthdate">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend><i class="fas fa-heart"></i> 个人偏好</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>性别：</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="male" name="gender" value="male">
+                                    <label for="male">男</label>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">女</label>
+                                    <input type="radio" id="other" name="gender" value="other">
+                                    <label for="other">其他</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>兴趣分类：</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="literature" name="interests" value="literature">
+                                <label for="literature">文学小说</label>
+                                <input type="checkbox" id="technology" name="interests" value="technology">
+                                <label for="technology">科技科普</label>
+                                <input type="checkbox" id="business" name="interests" value="business">
+                                <label for="business">经济管理</label>
+                                <input type="checkbox" id="social" name="interests" value="social">
+                                <label for="social">人文社科</label>
+                                <input type="checkbox" id="art" name="interests" value="art">
+                                <label for="art">艺术设计</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">所在城市：</label>
+                                <select id="city" name="city">
+                                    <option value="">请选择城市</option>
+                                    <option value="beijing">北京</option>
+                                    <option value="shanghai">上海</option>
+                                    <option value="guangzhou">广州</option>
+                                    <option value="shenzhen">深圳</option>
+                                    <option value="hangzhou">杭州</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookType">偏好图书类型：</label>
+                                <select id="bookType" name="bookType" multiple size="3">
+                                    <option value="novel">小说文学</option>
+                                    <option value="science">科学技术</option>
+                                    <option value="business">经济管理</option>
+                                    <option value="history">历史人文</option>
+                                    <option value="art">艺术设计</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="avatar">上传头像：</label>
+                            <input type="file" id="avatar" name="avatar" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言建议：</label>
+                            <textarea id="message" name="message" rows="4" placeholder="请留下您的宝贵建议..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> 提交订阅
+                        </button>
+                        <button type="reset" class="reset-btn">
+                            <i class="fas fa-redo"></i> 重置表单
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p>数字图书展销平台 &copy; 2025 版权所有</p>
+                <p class="motto">初心至善 匠心育人</p>
+            </div>
+        </footer>
+    </main>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>用户登录</h2>
+                <span class="close-btn" id="closeModal">&times;</span>
+            </div>
+            <form id="loginForm" class="modal-form">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="loginEmail" name="loginEmail" required placeholder="请输入邮箱或用户名">
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" name="loginPassword" required placeholder="请输入密码">
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remember"> 记住我
+                    </label>
+                    <a href="#" class="forgot-link">忘记密码？</a>
+                </div>
+                <button type="submit" class="login-submit-btn">登录</button>
+                <div class="register-link">
+                    还没有账号？<a href="#" id="showRegister">立即注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>用户注册</h2>
+                <span class="close-btn" id="closeRegisterModal">&times;</span>
+            </div>
+            <form id="registerForm" class="modal-form">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="regUsername" name="username" required placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="regEmail" name="email" required placeholder="请输入邮箱地址">
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="regPassword" name="password" required placeholder="请输入密码">
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="regConfirmPassword" name="confirmPassword" required placeholder="请确认密码">
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree" required> 我同意<a href="#">用户协议</a>和<a href="#">隐私政策</a>
+                    </label>
+                </div>
+                <button type="submit" class="register-submit-btn">注册</button>
+                <div class="login-link">
+                    已有账号？<a href="#" id="showLogin">立即登录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        const closeModal = document.getElementById('closeModal');
+        const closeRegisterModal = document.getElementById('closeRegisterModal');
+        const showRegister = document.getElementById('showRegister');
+        const showLogin = document.getElementById('showLogin');
+
+        loginBtn.addEventListener('click', function() {
+            loginModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', function() {
+            loginModal.style.display = 'none';
+        });
+
+        closeRegisterModal.addEventListener('click', function() {
+            registerModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (event.target === registerModal) {
+                registerModal.style.display = 'none';
+            }
+        });
+
+        showRegister.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'none';
+            registerModal.style.display = 'block';
+        });
+
+        showLogin.addEventListener('click', function(e) {
+            e.preventDefault();
+            registerModal.style.display = 'none';
+            loginModal.style.display = 'block';
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            if (email && password) {
+                alert('登录成功！');
+                loginModal.style.display = 'none';
+            } else {
+                alert('请填写完整的登录信息！');
+            }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('regUsername').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('两次输入的密码不一致！');
+                return;
+            }
+            
+            if (username && email && password) {
+                alert('注册成功！');
+                registerModal.style.display = 'none';
+            } else {
+                alert('请填写完整的注册信息！');
+            }
+        });
+
+        document.getElementById('subscriptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            console.log('订阅信息:', data);
+            alert('订阅成功！感谢您的订阅，我们将为您推荐优质的图书。');
+            this.reset();
+        });
+    });
+    </script>
+</body>
+</html>
